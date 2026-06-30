@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-family:"GFF Latin", sans-serif;
+}
+.back6{
+    height:100vh;
+    width: 100%;
+    background-image: url(./IMAGES/med.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*background-attachment: fixed;*/
+    
+}
+body{
+    overflow-x: hidden;
+  
+}
+.logo{
+    width:50px;
+    margin-left: 70px;
+}
+
+.navbar{
+    width:100%;
+    height:80px;
+    position: fixed;
+    top:0;
+    font-family:var(--font-family);
+    background-color: black;
+    display: flex;
+    z-index: 1;
+    /*align-items: center;*/
+    gap:30px;
+
+    
+}
+
+.elments{
+  color:rgb(188, 185, 185); 
+  display: flex;
+  gap:30px;
+  list-style-type:none;
+  margin: 30px 0px 0px 80px;
+}
+
+
+.elments a{
+    text-decoration: none;
+    color:rgb(188, 185, 185); 
+}
+
+.elments a:hover{
+    color:white;
+    cursor: pointer;
+}
+
+.elments li:hover{
+    color: white;
+    cursor: pointer;
+}
+
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-left: auto;
+  margin-right: 40px;
+  /*margin-left:500px;*/
+}
+
+.cart-icon,
+.globe-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color:rgb(188, 185, 185); 
+  transition: color 0.2s;
+}
+
+.cart-icon:hover,
+.globe-icon:hover {
+  color:white;
+}
+
+.btn-free {
+  background: #f5a623;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+
+
+
+ 
+.close-menu-btn {
+    display: none; 
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+
+/*xl*/
+@media screen and (max-width: 1399.98px) {
+    .fonts { left: 120px;}
+  .fonts p {font-size:25px ;}
+    .logo { margin-left: 40px; }
+    .right { margin-right: 40px; }
+}
+/*lg*/
+@media screen and (max-width: 1199.98px) {
+    .back6{
+        width: 1000px;
+    }
+    .fonts { left: 80px; }
+  /* .content1 { 
+        display: flex; 
+        justify-content:flex-end; 
+        align-items: center; 
+        padding-top: 120px; 
+    }*/
+    .fonts { 
+        position:absolute; top:0; left:0; width: 90%; 
+    }
+    .fonts h3 { font-size: 48px; padding-bottom: 25px; }
+
+   
+    .menu-toggle {
+        display: block;
+        order: 3;
+        margin-right: 40px;
+    }
+
+    .right {
+        margin-left: auto;
+        margin-right: 20px;
+        order: 2;
+    }
+
+    .logo {
+        margin-left: 40px;
+        order: 1;
+    }
+
+    
+    .elments {
+        position: fixed;
+        top: 0;
+        right: -100%;       
+        width: 60%;         
+        max-width: 340px;
+        height: 100vh;
+        background-color: rgba(10, 10, 10, 0.98);
+        border-left: 1px solid #222;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 40px;
+        gap: 35px;
+        z-index: 1000;
+        /*transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); */
+    }
+
+    
+    .menu-checkbox:checked ~ .elments {
+        right: 0;
+    }
+
+    .close-menu-btn {
+        display: block;
+        align-self: flex-end;
+        color:white;
+        font-size: 1.6rem;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .elments li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .elments li a {
+        font-size: 18px;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    .elments li a.active-link {
+        color: #f5a623;
+    }
+    
+    .elments li a i {
+        color: #777;
+        font-size: 14px;
+    }
+}
+
+/*  MD*/
+@media screen and (max-width: 991.98px) {
+
+    .back6{
+        width: 1000px;
+    }
+    .content1 { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        padding-top: 120px; 
+    }
+    .fonts { 
+        position: relative; top: 0; left: 0; text-align: center; width: 90%; 
+    }
+    .fonts h3 { font-size: 48px; padding-bottom: 25px; }
+
+    
+    .menu-toggle {
+        display: block;
+        order: 3;
+        margin-right: 40px;
+    }
+
+    .right {
+        margin-left: auto;
+        margin-right: 20px;
+        order: 2;
+    }
+
+    .logo {
+        margin-left: 40px;
+        order: 1;
+    }
+
+    
+    .elments {
+        position: fixed;
+        top: 0;
+        right: -100%;       
+        width: 60%;       
+        max-width: 340px;
+        height: 100vh;
+        background-color: rgba(10, 10, 10, 0.98);
+        border-left: 1px solid #222;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 40px;
+        gap: 35px;
+        z-index: 1000;
+       /* transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); */
+    }
+
+    
+    .menu-checkbox:checked ~ .elments {
+        right: 0;
+    }
+
+    .close-menu-btn {
+        display: block;
+        align-self: flex-end;
+        color:white;
+        font-size: 1.6rem;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .elments li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .elments li a {
+        font-size: 18px;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+  
+    .elments li a.active-link {
+        color: #f5a623;
+    }
+    
+    .elments li a i {
+        color: #777;
+        font-size: 14px;
+    }
+}
+
+/*  SM & XS: Small Mobile Screens  */
+@media screen and (max-width: 767.98px) {
+    
+    .logo { margin-left: 20px; }
+    .menu-toggle { margin-right: 20px; }
+    
+    .right .cart-icon, .right .globe-icon {
+        display: none; /* Hides desktop icons to clear horizontal mobile space */
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    
+    .navbar { height: 70px; }
+    .content1 { padding-top: 90px; }
+    .logo { width: 42px; }
+    .fonts h3 { font-size: 34px; }
+    .fonts p { font-size: 15px; line-height: 1.4; }
+    .input-box { width: 100%; max-width: 260px; }
+    
+    .elments {
+        width:75%;}
+}
+
+.submenu{
+    height:60px;
+    width:100%;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 310px;
+    gap:60px;
+    background-color:#2B2B2B;
+}
+
+.submenu a{
+    text-decoration: none;
+    color:rgb(188, 185, 185); 
+}
+
+.submenu a:hover{
+    color: #f5a623;
+    border-bottom:3px solid #f5a623;
+
+}

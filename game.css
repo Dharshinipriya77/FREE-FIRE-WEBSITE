@@ -1,0 +1,519 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-family:"GFF Latin", sans-serif;
+}
+.back{
+    height:100vh;
+    width: 100%;
+    background-image: url(./IMAGES/ff.jpg);
+     background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    overflow: hidden;
+    /*background-attachment: fixed;*/
+    
+}
+
+.logo{
+    width:50px;
+    margin-left: 70px;
+}
+
+.navbar{
+    width:100%;
+    height:80px;
+    position: fixed;
+    top:0;
+    font-family:var(--font-family);
+    background-color: black;
+    display: flex;
+    z-index: 1;
+    /*align-items: center;*/
+    gap:30px;
+
+    
+}
+
+.elments{
+  color:rgb(188, 185, 185); 
+  display: flex;
+  gap:30px;
+  list-style-type:none;
+  margin: 30px 0px 0px 80px;
+}
+
+
+.elments a{
+    text-decoration: none;
+    color:rgb(188, 185, 185); 
+}
+
+.elments a:hover{
+    color:white;
+    cursor: pointer;
+}
+
+.elments li:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-left:500px;
+}
+
+.cart-icon,
+.globe-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color:rgb(188, 185, 185); 
+  transition: color 0.2s;
+}
+
+.cart-icon:hover,
+.globe-icon:hover {
+  color:white;
+}
+
+.btn-free {
+  background: #f5a623;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.close-menu-btn {
+    display: none; 
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 25px;
+}
+ /*xl*/
+@media screen and (max-width:1399px){
+
+    .logo{
+        margin-left:50px;
+    }
+
+    .right{
+        margin-right:50px;
+    }
+
+    .freefire{
+        left:50px;
+    }
+
+    .battle{
+        width:400px;
+    }
+
+}
+/*lg*/
+@media screen and (max-width:1199px){
+
+    .navbar{
+        height:75px;
+        padding:0 35px;
+        display:flex;
+        align-items:center;
+    }
+
+    .logo{
+        width:48px;
+        margin-left:0;
+    }
+
+    /* Navigation drawer */
+
+    .elments{
+        position:fixed;
+        top:0;
+        left:-100%;
+        width:280px;
+        height:100vh;
+        background:#000;
+        flex-direction:column;
+        padding:40px 30px;
+        gap:25px;
+        margin:0;
+        transition:0.3s;
+        z-index:1000;
+    }
+
+    .close-menu-btn{
+        display:block;
+        color:white;
+        font-size:1.6rem;
+        cursor:pointer;
+        margin-bottom:10px;
+    }
+
+    .menu-checkbox:checked ~ .elments{
+        left:0;
+    }
+
+    /* Right section */
+
+    .right{
+        display:flex;
+        align-items:center;
+        gap:15px;
+        margin-left:auto;
+        margin-right:0;
+        order:2;
+    }
+
+    /* Toggle Button */
+
+    .menu-toggle{
+        display:block;
+        color:white;
+        font-size:1.5rem;
+        cursor:pointer;
+        margin-top: 4px;
+        margin-left:15px;
+        order:3;
+    }
+
+    /* Hero Section */
+
+    .freefire{
+        position:absolute;
+        left:35px;
+        top:45%;
+        transform:translateY(-50%);
+        text-align:left;
+    }
+
+    .battle{
+        width:350px;
+        display:block;
+    }
+
+    .google{
+        width:160px;
+        margin-top:15px;
+        display:block;
+    }
+}
+/*md*/
+@media screen and (max-width:991px){
+
+    .navbar{
+        height:70px;
+        padding:0 25px;
+        display:flex;
+        align-items:center;
+    }
+
+    .logo{
+        width:42px;
+        margin-left:0;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:1.5rem;
+        color:white;
+        cursor:pointer;
+        margin-left:15px;
+    }
+
+    .elments{
+        position:fixed;
+        top:0;
+        left:-100%;
+        width:280px;
+        height:100vh;
+        background:#000;
+        flex-direction:column;
+        padding:40px 30px;
+        gap:25px;
+        margin:0;
+        transition:0.3s;
+        z-index:1000;
+    }
+
+    .menu-checkbox:checked ~ .elments{
+        left:0;
+    }
+
+    .close-menu-btn{
+        display:block;
+        color:white;
+        font-size:1.6rem;
+        cursor:pointer;
+    }
+
+    .right{
+        display:flex;
+        align-items:center;
+        gap:15px;
+        margin-left:auto;
+    }
+
+  .freefire{
+        position:absolute;
+        left:30px;
+        top:45%;
+        transform:translateY(-50%);
+        text-align:left;
+    }
+
+    .battle{
+        width:300px;
+        display:block;
+    }
+
+    .google{
+        display:none;
+    }
+
+    .btn-free{
+        padding:8px 15px;
+        font-size:0.85rem;
+    }
+}
+/*sm*/
+
+@media screen and (max-width:767px){
+
+    .navbar{
+        height:70px;
+        padding:0 20px;
+    }
+
+    .logo{
+        width:40px;
+        margin-left:0;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:1.4rem;
+        margin-left:10px;
+    }
+
+    .elments{
+        width:260px;
+    }
+
+    .freefire{
+        position:absolute;
+        left:20px;
+        top:45%;
+        transform:translateY(-50%);
+        text-align:left;
+    }
+
+    .battle{
+        width:250px;
+        display:block;
+    }
+
+    .google{
+        display:none;
+    }
+
+    .btn-free{
+        padding:7px 12px;
+        font-size:0.8rem;
+    }
+
+    .cart-icon,
+    .globe-icon{
+        font-size:1rem;
+    }
+   
+
+}
+/*xs*/
+@media screen and (max-width:575px){
+
+    .navbar{
+        height:65px;
+        padding:0 15px;
+    }
+
+    .logo{
+        width:36px;
+        margin-left:0;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:1.3rem;
+        margin-left:8px;
+    }
+
+    .elments{
+        width:240px;
+    }
+
+    .freefire{
+        position:absolute;
+        left:15px;
+        top:45%;
+        transform:translateY(-50%);
+        text-align:left;
+    }
+
+    .battle{
+        width:200px;
+        display:block;
+    }
+
+    .google{
+        display:none;
+    }
+
+    .btn-free{
+        padding:6px 10px;
+        font-size:0.75rem;
+    }
+
+    .cart-icon,
+    .globe-icon{
+        display:none;
+    }
+
+   
+}
+               /*SUB MENU CONTAINER*/
+
+.sub-menu{
+    height:60px;
+    width:100%;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 240px;
+    gap:60px;
+    background-color:#2B2B2B;
+}
+
+.sub-menu a{
+    text-decoration: none;
+    color:rgb(188, 185, 185); 
+}
+
+.sub-menu a:hover{
+    color: #f5a623;
+    border-bottom:3px solid #f5a623;
+
+}
+
+
+/* xs*/
+@media screen and (max-width: 575px) {
+    .sub-menu {
+        height: auto ;
+        padding: 12px 10px ;
+        padding-left: 0 ;
+        margin-top: 60px;
+        display: flex;
+        justify-content:flex-start ;
+    }
+
+    .sub-menu a {
+        font-size: 12px ;
+        padding-bottom: 4px;
+        height: auto;
+    }
+}
+
+/* SM */
+
+
+/* SM */
+@media screen and (min-width:576px) and (max-width:767px){
+
+    .sub-menu{
+        height:auto;
+        width:100%;
+        margin-top:60px;
+        padding:15px 10px;
+
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:flex-start;
+        gap:20px;
+    }
+
+    .sub-menu a{
+        font-size:14px;
+    }
+
+}
+/* MD */
+@media screen and (min-width:768px) and (max-width:991px){
+    .sub-menu{
+        height:60px;
+        padding:0 30px;
+        margin-top:70px;
+        justify-content:flex-start;
+    }
+
+    .sub-menu a{
+        font-size:14px;
+    }
+}
+
+/* LG */
+@media screen and (min-width:992px) and (max-width:1199px){
+    .sub-menu{
+        height:60px;
+        padding:0 60px;
+        margin-top:75px;
+        justify-content:space-evenly;
+    }
+
+    .sub-menu a{
+        font-size:15px;
+    }
+}
+
+/* XL */
+@media screen and (min-width:1200px) and (max-width:1399px){
+    .sub-menu{
+        height:70px;
+        padding:0 190px;
+        margin-top:80px;
+       
+        justify-content:flex-start;
+        gap:50px;
+    }
+
+    .sub-menu a{
+        font-size:16px;
+    }
+}
+
+/* XXL */
+@media screen and (min-width:1400px){
+    .sub-menu{
+        height:60px;
+        padding-left:240px;
+        gap:60px;
+        margin-top:80px;
+    }
+
+    .sub-menu a{
+        font-size:16px;
+    }
+}
